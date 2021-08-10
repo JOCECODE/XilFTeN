@@ -16,7 +16,7 @@ export default function MovieRows({ title, fetchUrl, isLarge, isNull }) {
   }
   fetchData();
  }, [fetchUrl]);
- console.log(movies);
+
 
  return (
   <>
@@ -35,6 +35,8 @@ export default function MovieRows({ title, fetchUrl, isLarge, isNull }) {
         :
         <img
         key={movie.id}
+
+        // if true give class isLarge
         className={`poster ${isLarge && "isLarge"}`}
         src={`${base_url}${isLarge ? movie.poster_path : movie.backdrop_path}`} 
         alt={movie.name}

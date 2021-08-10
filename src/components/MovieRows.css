@@ -1,3 +1,8 @@
+/* movie rows */
+.row {
+  margin-left: 20px;
+}
+
 .posterContainer {
   display: flex;
   overflow-y: hidden;
