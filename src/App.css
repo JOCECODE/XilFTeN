@@ -1,3 +1,11 @@
 * {
   margin: 0;
 }
+
+.App {
+  background-color: rgb(10,10,10);
+}
+
+.xilften {
+  color: red;
+}

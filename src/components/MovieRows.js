@@ -23,7 +23,7 @@ export default function MovieRows({ title, fetchUrl, isLarge, isNull }) {
 
    <div className="row">
 
-    <h2>{title}</h2>
+    <h2 className="movieTitle">{title}</h2>
 
       <div className="posterContainer">
 

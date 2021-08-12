@@ -6,7 +6,7 @@ import Banner from "./components/Banner";
 function App() {
   return (
     <div className="App">
-      <h1>XiLFTeN</h1>
+      <h1 className="xilften">XiLFTeN</h1>
       <Banner/>
       <MovieRows 
       title="Netflix Originals" 
