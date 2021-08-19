@@ -1,3 +1,24 @@
-.testerC {
-    color: red;
+.nav {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    padding: 20px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #111;
+}
+
+.xilften {
+    position: fixed;
+    left: 20px;
+    width: 80px;
+    object-fit: contain;
+}
+
+.avatar {
+    position: fixed;
+    right: 20px;
+    width: 40px;
+    object-fit: contain;
 }
