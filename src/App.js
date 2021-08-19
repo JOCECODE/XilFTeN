@@ -7,7 +7,6 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <div className="App">
-      <h1 className="xilften">XiLFTeN</h1>
       <Navbar/>
       <Banner/>
       <MovieRows 
