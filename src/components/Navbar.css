@@ -6,7 +6,16 @@
     height: 30px;
     display: flex;
     justify-content: space-between;
+    z-index: 1;
+
+    /* animations */
+    transition-timing-function: ease-in;
+    transition: all 0.4s;
+}
+
+.nav_black {
     background-color: #111;
+    
 }
 
 .xilften {
@@ -22,3 +31,4 @@
     width: 40px;
     object-fit: contain;
 }
+
