@@ -2,16 +2,18 @@ import './App.css';
 import MovieRows from "./components/MovieRows";
 import requests from "./requests";
 import Banner from "./components/Banner";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
       <h1 className="xilften">XiLFTeN</h1>
+      <Navbar/>
       <Banner/>
       <MovieRows 
       title="Netflix Originals" 
       fetchUrl={requests.fetchNetflixOriginals}
-      isLarge />
+      isLarge={true} />
       <MovieRows title="Trending" fetchUrl={requests.fetchTrending}/>
       <MovieRows title="Romantic Comedies" fetchUrl={requests.fetchRomanceMovies} />
       <MovieRows title="Top-Rated" fetchUrl={requests.fetchTopRated}/>
@@ -24,3 +26,4 @@ function App() {
 }
 
 export default App;
+
