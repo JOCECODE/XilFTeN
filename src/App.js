@@ -4,6 +4,10 @@ import requests from "./requests";
 import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
 
+
+// left off at 2:40:08 
+// https://www.youtube.com/watch?v=XtMThy8QKqU
+
 function App() {
   return (
     <div className="App">
