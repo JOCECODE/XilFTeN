@@ -3,13 +3,15 @@ import YouTube from 'react-youtube';
 import axios from "../axios";
 import "./MovieRows.css" ;
 import movieTrailer from "movie-trailer";
-import ReactPlayer from "react-player";
+// import ReactPlayer from "react-player";
 
 const base_url = "https://image.tmdb.org/t/p/original";
 
 export default function MovieRows({ title, fetchUrl, isLarge, isNull }) {
- const [trailerUrl, setTrailerUrl] = useState("");
+ 
+  const [trailerUrl, setTrailerUrl] = useState("");
  const [movies, setMovies] = useState([]);
+
  useEffect(() => {
 
   async function fetchData() {
@@ -18,14 +20,18 @@ export default function MovieRows({ title, fetchUrl, isLarge, isNull }) {
     return req;
   }
   fetchData();
-  setTrailerUrl("JwPW9VcCq7g")
  }, [fetchUrl]);
 
       // for the react youtube component
-    //   const opts = {
-    //   height: '390px',
-    //   width: '100%'
-    // };
+      const opts = {
+      height: '390px',
+      width: '100%',
+      playerVars: {
+        autoplay: 1
+      }
+      
+    };
+
       const handleClick = (movie) => {
         console.log(trailerUrl);
           if (trailerUrl) {
@@ -75,8 +81,9 @@ export default function MovieRows({ title, fetchUrl, isLarge, isNull }) {
 })}
 
       </div>
-        {/* <YouTube videoId={trailerUrl} opts={opts} /> */}
-        <ReactPlayer url={"https://www.youtube.com/watch?v=JwPW9VcCq7g"} className="youtubeTrailer"/>
+      {/* when I have a trailerUrl then I will add autoplay trailer */}
+        {trailerUrl &&  <YouTube videoId={trailerUrl} opts={opts} />}
+        {/* <ReactPlayer url={"https://www.youtube.com/watch?v=JwPW9VcCq7g"} className="youtubeTrailer"/> */}
    </div>
 
   </>
