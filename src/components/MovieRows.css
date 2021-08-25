@@ -1,0 +1,46 @@
+/* movie rows */
+.row {
+  margin-left: 20px;
+}
+.movieTitle {
+  color: white;
+  opacity: 80%;
+}
+
+
+.posterContainer {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+/* don't show scroll bar but keep functionality of it */
+.posterContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.poster {
+  object-fit: contain;
+  width: 100%;
+  max-height: 150px;
+  transition: transform 450ms;
+  margin-right: 10px;
+}
+
+.poster:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}
+
+.isLarge {
+  max-height: 250px;
+}
+
+.isLarge:hover {
+  transform: scale(1.09);
+}
+
+.nullImage {
+  display: none;
+}
