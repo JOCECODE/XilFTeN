@@ -8,7 +8,7 @@ import movieTrailer from "movie-trailer";
 const base_url = "https://image.tmdb.org/t/p/original";
 
 export default function MovieRows({ title, fetchUrl, isLarge, isNull }) {
- 
+//  my youtube video JwPW9VcCq7g
   const [trailerUrl, setTrailerUrl] = useState("");
  const [movies, setMovies] = useState([]);
 
@@ -26,8 +26,9 @@ export default function MovieRows({ title, fetchUrl, isLarge, isNull }) {
       const opts = {
       height: '390px',
       width: '100%',
+
       playerVars: {
-        autoplay: 1
+        autoplay: 1,
       }
       
     };
@@ -48,7 +49,11 @@ export default function MovieRows({ title, fetchUrl, isLarge, isNull }) {
               setTrailerUrl(urlParams.get("v"));
               console.log(trailerUrl);     
             })
-            .catch(error => console.log(error))
+            .catch(error => {
+              console.log(error);
+              setTrailerUrl("JwPW9VcCq7g");
+            }
+              )
           }
       }
         console.log(movieTrailer("lucifer"));
